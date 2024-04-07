@@ -66,7 +66,7 @@ function update() {
     ballSpeedY = -ballSpeedY;
   }
 
-  if ((ballX <= paddleWidth && ballY >= paddle1Y && ballY <= paddle1Y + paddleHeight) || (ballX >= gameWidth - paddleWidth - ballSize && ballY >= paddle2Y && ballY <= paddle2Y + paddleHeight)) {
+  if ((ballX <= paddleWidth && ballY + ballSize >= paddle1Y && ballY <= paddle1Y + paddleHeight) || (ballX + ballSize >= gameWidth - paddleWidth && ballY + ballSize >= paddle2Y && ballY <= paddle2Y + paddleHeight)) {
     ballSpeedX = -ballSpeedX;
   }
 
